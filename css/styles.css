@@ -13,13 +13,63 @@ body {
     font-family: sans-serif;
 }
 
+/****** HEADER ******/
+
 .main-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 2.5rem 2rem;
 }
 
 .close-menu-icon {
     display: none;
+}
+
+
+/****** MAIN CONTENT ******/
+
+.main-content {
+    text-align: center;
+}
+
+.hero-img {
+    width: 100%;
+    margin-bottom: 2rem;
+}
+
+.main-section h1 {
+    font-size: 4.2rem;
+    margin-bottom: 3rem;
+}
+
+.main-section p {
+    line-height: 1.6;
+    font-size: 2rem;
+    color: #444;
+    margin-bottom: 2.7rem;
+    text-align: center;
+}
+
+.main-section button {
+    background-color: #000;
+    color: #fff;
+    border-radius: 15px;
+    padding: 1.5rem 2.9rem;
+    border: none;
+    font-size: 1.9rem;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.main-section button:hover
+{
+    background-color: #fff;
+    color: #000;
+    border: 1px solid #000;
+}
+
+
+/** SHARED STYLES **/
+.main-header, .main-section {
+    padding: 2.5rem 2rem;
 }
