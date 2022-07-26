@@ -44,7 +44,6 @@ a {
 }
 
 .navigation-menu {
-    display: flex;
     justify-content: end;
     position: absolute;
     left: 0;
@@ -55,12 +54,18 @@ a {
     display: none;
 }
 
-.menu-sign-container {
+.right-menu-nav {
     background-color: #fff;
     display: flex;
     flex-direction: column;
     gap: 4rem;
     width: 30rem;
+    transition: transform 0.5s;
+    transform: translateX(100%);
+}
+
+.right-menu-nav--opened {
+    transform: translateX(0%);
 }
 
 .close-menu-img {
@@ -151,6 +156,6 @@ a {
 }
 
 /** SHARED STYLES **/
-.main-header, .main-section, .main-footer, .menu-sign-container {
+.main-header, .main-section, .main-footer, .right-menu-nav {
     padding: 2.5rem 2rem;
 }
