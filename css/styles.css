@@ -30,6 +30,10 @@ a {
     grid-template-rows: auto 1fr auto;
 }
 
+.icon-button {
+    cursor: pointer;
+}
+
 /****** HEADER ******/
 
 .main-header {
@@ -46,8 +50,9 @@ a {
     left: 0;
     top: 0;
     width: 100%;
-    height: 100%; /*TODO Take a look in portrait mode.*/
+    height: 100%;
     background-color: rgba(0, 0, 0, 0.6);
+    display: none;
 }
 
 .menu-sign-container {
