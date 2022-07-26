@@ -13,8 +13,7 @@ body {
     font-family: sans-serif;
     min-height: 100vh;
     display: grid;
-    grid-template-rows: 80px auto 100px;
-    
+    grid-template-rows: auto 1fr auto;
 }
 
 /****** HEADER ******/
