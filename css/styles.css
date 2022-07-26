@@ -11,9 +11,7 @@ html {
 
 body {
     font-family: sans-serif;
-    min-height: 100vh;
-    display: grid;
-    grid-template-rows: auto 1fr auto;
+    color: #444;
 }
 
 ul {
@@ -25,6 +23,12 @@ a {
     color: inherit;
 }
 
+.main-container {
+    position: relative;
+    min-height: 100vh;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+}
 
 /****** HEADER ******/
 
@@ -32,17 +36,47 @@ a {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    font-size: 1.6rem;
+    font-size: 1.8rem;
 }
 
-.menu-links-container, .menu-links-secondary {
+.navigation-menu {
+    display: flex;
+    justify-content: end;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%; /*TODO Take a look in portrait mode.*/
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.menu-sign-container {
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+    width: 20rem;
+}
+
+.close-menu-img {
+    align-self: end;
+    cursor: pointer;
+}
+
+.menu-links, .menu-links-secondary {
     display: flex;
     flex-direction: column;
     gap: 2rem;
+    align-self: start;
+}
+
+.menu-item {
+    display: flex;
+    justify-content: start;
 }
 
 .menu-links-secondary {
-    /*!display: none;*/
+    display: none;
     margin-left: 2rem;
     margin-top: 2.5rem;
 }
@@ -51,9 +85,6 @@ a {
     display: flex;
     gap: 1.4rem;
     align-items: center;
-}
-
-.arrow-button {
     cursor: pointer;
 }
 
@@ -75,12 +106,12 @@ a {
 .main-section h1 {
     font-size: 3.5rem;
     margin-bottom: 3rem;
+    color: #000;
 }
 
 .main-section p {
     line-height: 1.6;
     font-size: 2rem;
-    color: #444;
     margin-bottom: 2.7rem;
     text-align: center;
 }
@@ -115,6 +146,6 @@ a {
 }
 
 /** SHARED STYLES **/
-.main-header, .main-section, .main-footer {
+.main-header, .main-section, .main-footer, .menu-sign-container {
     padding: 2.5rem 2rem;
 }
