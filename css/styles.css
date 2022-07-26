@@ -55,7 +55,7 @@ a {
     display: flex;
     flex-direction: column;
     gap: 4rem;
-    width: 20rem;
+    width: 30rem;
 }
 
 .close-menu-img {
