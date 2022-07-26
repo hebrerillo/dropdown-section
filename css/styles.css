@@ -97,13 +97,14 @@ a:hover {
 
 .menu-item {
     display: flex;
-    justify-content: start;
+    align-items: start;
+    flex-direction: column;
+    gap: 2.5rem;
 }
 
 .menu-links-secondary {
     display: none;
     margin-left: 2rem;
-    margin-top: 2.5rem;
 }
 
 .menu-item-title {
