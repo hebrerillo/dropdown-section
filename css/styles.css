@@ -25,6 +25,10 @@ a {
     color: inherit;
 }
 
+a:hover {
+    color: #000;
+}
+
 .main-container {
     position: relative;
     min-height: 100vh;
