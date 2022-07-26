@@ -41,6 +41,10 @@ a {
     cursor: pointer;
 }
 
+.button-radius {
+    border-radius: 15px;
+}
+
 /****** HEADER ******/
 
 .main-header {
@@ -65,7 +69,7 @@ a {
     background-color: #fff;
     display: flex;
     flex-direction: column;
-    gap: 4rem;
+    gap: 6rem;
     width: 30rem;
     transition: transform 0.5s;
     transform: translateX(100%);
@@ -109,6 +113,20 @@ a {
     display: none;
 }
 
+.sign-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.register-button {
+    align-self: stretch;
+    border: 1px solid #444;
+    text-align: center;
+    padding: 1.2rem 0;
+}
+
 /****** MAIN CONTENT ******/
 
 .main-content {
@@ -136,7 +154,6 @@ a {
 .hoverable-button {
     background-color: #000;
     color: #fff;
-    border-radius: 15px;
     padding: 1.5rem 2.9rem;
     border: 1px solid #000;
     font-size: 1.9rem;
