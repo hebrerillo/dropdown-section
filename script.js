@@ -2,8 +2,9 @@
 
 (function ()
 {
+    /** SHOWING AND HIDING THE RIGHT MENU **/
     const navigationMenu = document.querySelector('.navigation-menu');
-    const rightMenu = document.querySelector('.right-menu-nav');
+    const rightMenu = navigationMenu.querySelector('.right-menu-nav');
 
     document.querySelector('#open-right-menu-button').addEventListener('click', function ()
     {
@@ -11,7 +12,6 @@
         rightMenu.offsetHeight;
         rightMenu.classList.add('right-menu-nav--opened');
     });
-
 
     document.querySelector('#close-right-menu-button').addEventListener('click', function ()
     {
