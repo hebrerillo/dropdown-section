@@ -27,6 +27,15 @@
     });
 
     /** SHOWING AND HIDING SECONDARY MENUS **/
+    const submenuTransitionEnd = function ()
+    {
+        if (!this.style.maxHeight)
+        {
+            this.style.display = 'none';
+            this.removeEventListener('transitionend', submenuTransitionEnd);
+        }
+    };
+
     document.querySelector('.menu-links').addEventListener('click', function (event)
     {
         //doing event delegation
@@ -37,13 +46,20 @@
             const subMenu = menuItem.querySelector('.secondary-menu-container');
             if (!subMenu.style.maxHeight)
             {
+                subMenu.style.transition = 'none';
+                subMenu.style.display = 'block';
+                subMenu.style.transition = '';
+                subMenu.offsetHeight;
                 subMenu.style.maxHeight = subMenu.scrollHeight + 'px';
+
+                subMenu.addEventListener('transitionend', submenuTransitionEnd);
             }
             else
             {
                 subMenu.style.maxHeight = null;
             }
+
+            return;
         }
     });
-
 })();
