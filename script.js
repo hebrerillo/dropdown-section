@@ -5,8 +5,8 @@
     {
         this.navigationMenu = document.querySelector('.navigation-menu'); //The nav item.
         this.rightMenu = document.querySelector('.right-menu-nav'); //The right menu.
-        this.openRightMenuButton = document.querySelector('[data-open-right-menu]'); //The button to open the right menu.
-        this.closeRightMenuButton = document.querySelector('[data-close-right-menu]'); //The button to close the right menu.
+        this.openRightMenuButton = document.querySelector('.open-menu-img'); //The button to open the right menu.
+        this.closeRightMenuButton = document.querySelector('.close-menu-img'); //The button to close the right menu.
         this.menuLinks = document.querySelector('.menu-links'); //The container of the menu links in the header. It will be used to do event delegation.
         this.submenuTransitionEndCB = this.submenuTransitionEnd.bind(this);
         this.setInitialEvents();
@@ -62,6 +62,7 @@
      */
     SnapApp.prototype.submenuTransitionEnd = function (event)
     {
+        event.stopPropagation();
         let subMenu = event.target;
         if (!subMenu.style.maxHeight)
         {

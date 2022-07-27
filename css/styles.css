@@ -36,9 +36,10 @@ a:hover {
     grid-template-rows: auto 1fr auto;
 }
 
-.padding-container  /* This padding is added to some containers so that they are aligned vertically and/or horizontally */
+.horizontal-padding  /* This padding is added to some containers so that they are aligned horizontally */
 {
-    padding: 2.5rem 2rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
 }
 
 .icon-button {
@@ -56,6 +57,11 @@ a:hover {
     justify-content: space-between;
     align-items: center;
     font-size: 1.8rem;
+    padding-bottom: 2.5rem;
+}
+
+.main-header, .right-menu-nav {
+    padding-top: 2.5rem;
 }
 
 .navigation-menu {
@@ -73,7 +79,7 @@ a:hover {
     background-color: #fff;
     display: flex;
     flex-direction: column;
-    gap: 6rem;
+    gap: 5rem;
     width: 30rem;
     transition: transform 0.5s;
     transform: translateX(100%);
@@ -146,19 +152,24 @@ a:hover {
 
 .hero-img {
     width: 100%;
-    margin-bottom: 2rem;
+    margin-bottom: 5rem;
+}
+
+.main-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2.5rem;
 }
 
 .main-section h1 {
     font-size: 3.5rem;
-    margin-bottom: 3rem;
     color: #000;
 }
 
 .main-section p {
     line-height: 1.6;
     font-size: 2rem;
-    margin-bottom: 2.7rem;
     text-align: center;
 }
 
@@ -184,8 +195,71 @@ a:hover {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    padding-bottom: 4rem;
 }
 
 .sponsor-footer-img {
     width: 8.5rem;
+}
+
+@media screen and (min-width: 850px) {
+    html {
+        font-size: 62.5%;
+    }
+
+    /**** HEADER ****/
+
+    .main-header {
+        gap: 6rem;
+    }
+
+    .open-menu-img, .close-menu-img {
+        display: none;
+    }
+
+    .navigation-menu {
+        display: flex;
+        align-items: center;
+        justify-content: normal;
+        position: static;
+        width: auto;
+        height: auto;
+        background-color: transparent;
+        flex-grow: 1;
+    }
+
+    .right-menu-nav {
+        transition: none;
+        transform: none;
+        background-color: transparent;
+        flex-direction: row;
+        align-items: center;
+        flex-grow: 1;
+        justify-content: space-between;
+        gap: 0;
+        width: auto;
+        padding: 0;
+    }
+
+    .menu-links {
+        display: flex;
+        flex-direction: row;
+        align-self: auto;
+    }
+
+
+
+
+    .sign-container {
+        flex-direction: row;
+        gap: 2.5rem;
+    }
+
+    .register-button {
+
+        align-self: auto;
+        text-align: unset;
+        padding: 1rem 2rem;
+    }
+
 }
