@@ -26,4 +26,24 @@
         }
     });
 
+    /** SHOWING AND HIDING SECONDARY MENUS **/
+    document.querySelector('.menu-links').addEventListener('click', function (event)
+    {
+        //doing event delegation
+        let clickedElement = event.target.closest('.menu-item-title[data-opensecundary]');
+        if (clickedElement)
+        {
+            const menuItem = clickedElement.closest('.menu-item');
+            const subMenu = menuItem.querySelector('.secondary-menu-container');
+            if (!subMenu.style.maxHeight)
+            {
+                subMenu.style.maxHeight = subMenu.scrollHeight + 'px';
+            }
+            else
+            {
+                subMenu.style.maxHeight = null;
+            }
+        }
+    });
+
 })();

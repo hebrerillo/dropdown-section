@@ -88,6 +88,12 @@ a:hover {
     cursor: pointer;
 }
 
+.secondary-menu-container {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s;
+}
+
 .menu-links, .menu-links-secondary {
     display: flex;
     flex-direction: column;
@@ -99,12 +105,11 @@ a:hover {
     display: flex;
     align-items: start;
     flex-direction: column;
-    gap: 2.5rem;
 }
 
 .menu-links-secondary {
-    display: none;
     margin-left: 2rem;
+    padding-top: 2rem;
 }
 
 .menu-item-title {
