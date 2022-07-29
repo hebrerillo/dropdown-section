@@ -221,6 +221,12 @@ a:hover {
         font-size: 62.5%;
     }
 
+    .main-container {
+        grid-template-rows: auto 1fr;
+        max-width: 170rem;
+        margin: 0 auto;
+    }
+
     /**** HEADER ****/
 
     .main-header {
@@ -291,13 +297,61 @@ a:hover {
         text-align: unset;
         padding: 1rem 2rem;
     }
-    
+
     /* MAIN CONTENT */
+    .main-content {
+        grid-template-rows: repeat(4, 1fr);
+        grid-template-columns: 1fr 1fr;
+        padding: 0 0 10rem 0;
+        width: 85%;
+        margin: 0 auto;
+        align-items: end;
+        text-align: start;
+    }
+
+    .hero-img {
+        grid-column: 2/3;
+        grid-row: 1/-1;
+        display: flex;
+    }
+
+    .hero-img img {
+        width: 74%;
+    }
+    
+    .hero-img picture {
+        display: flex;
+        justify-content: end;
+    }
+
+    .main-section {
+        grid-column: 1/2;
+        grid-row: 1/4;
+        margin-bottom: 0;
+        align-items: start;
+        gap: 5rem;
+    }
+
+    .main-section h1 {
+        font-size: 7.5rem;
+    }
+    
+    .main-section h1 span {
+        display: block;
+    }
+
+    .main-section p {
+        width: 90%;
+    }
     .hero-img, .main-content {
         margin-bottom: 0;
     }
-    
+
+    /* FOOTER */
     .main-footer {
-        padding: 0;
+        grid-column: 1/2;
+        grid-row: 4/5;
+        padding:0;
     }
+
 }
