@@ -289,4 +289,13 @@ a:hover {
         text-align: unset;
         padding: 1rem 2rem;
     }
+    
+    /* MAIN CONTENT */
+    .hero-img, .main-content {
+        margin-bottom: 0;
+    }
+    
+    .main-footer {
+        padding: 0;
+    }
 }
