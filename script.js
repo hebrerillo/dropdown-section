@@ -22,6 +22,33 @@
         this.rightMenu.addEventListener('transitionend', this.rightMenuOnTransitionEnd.bind(this));
         this.menuLinks.addEventListener('click', this.menuItemClick.bind(this));
         this.submenuTransitionEndCB = this.submenuTransitionEnd.bind(this);
+        window.addEventListener('click', this.handleWindowClick.bind(this));
+    };
+
+    /**
+     * Handles the click event in the whole window object.
+     *
+     * @param {Event} event The event
+     */
+    SnapApp.prototype.handleWindowClick = function (event)
+    {
+        this.closeSubmenus(event.target.closest('.secondary-menu-container'));
+    };
+
+    /**
+     * Closes all submenus, except the one passed as paramenter
+     * 
+     * @param {Object} The submenu that will not be closed. 
+     */
+    SnapApp.prototype.closeSubmenus = function (submenuException)
+    {
+        this.menuLinks.querySelectorAll('.secondary-menu-container').forEach(submenu =>
+        {
+            if (submenu !== submenuException)
+            {
+                submenu.style.maxHeight = null;
+            }
+        });
     };
 
     /**
@@ -31,6 +58,7 @@
      */
     SnapApp.prototype.menuItemClick = function (event)
     {
+        event.stopPropagation();
         let clickedElement = event.target.closest('.menu-item-title[data-opensecundary]');
         if (clickedElement)
         {
@@ -39,12 +67,13 @@
             if (!subMenu.style.maxHeight)
             {
                 subMenu.style.transition = 'none';
-                subMenu.style.display = 'block';
+                subMenu.classList.add('secondary-menu-container--show');
                 subMenu.style.transition = '';
                 subMenu.offsetHeight;
                 subMenu.style.maxHeight = subMenu.scrollHeight + 'px';
 
                 subMenu.addEventListener('transitionend', this.submenuTransitionEndCB);
+                this.closeSubmenus(subMenu);
             }
             else
             {
@@ -66,7 +95,7 @@
         let subMenu = event.target;
         if (!subMenu.style.maxHeight)
         {
-            subMenu.style.display = 'none';
+            subMenu.classList.remove('secondary-menu-container--show');
             subMenu.removeEventListener('transitionend', this.submenuTransitionEndCB);
         }
     };

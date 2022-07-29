@@ -106,6 +106,10 @@ a:hover {
     transition: max-height 0.4s;
 }
 
+.secondary-menu-container--show {
+    display: block;
+}
+
 .menu-links, .menu-links-secondary {
     display: flex;
     flex-direction: column;
