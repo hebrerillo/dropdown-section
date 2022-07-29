@@ -251,9 +251,25 @@ a:hover {
         flex-direction: row;
         align-self: auto;
     }
+    
+    .menu-item {
+        position: relative;
+    }
 
+    .secondary-menu-container {
+        position: absolute;
+        top: 200%;
+        right: 0px;
+        box-shadow: 0px 0px 15px 10px rgba(0, 0, 0, 0.05);
+        border-radius: 10px;
+        white-space: nowrap;
+    }
 
-
+    .menu-links-secondary {
+        margin-left: 0;
+        background-color: #fff;
+        padding: 2rem;
+    }
 
     .sign-container {
         flex-direction: row;
