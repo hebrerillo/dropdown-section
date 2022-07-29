@@ -65,7 +65,7 @@ a:hover {
 }
 
 .navigation-menu {
-    display: flex;
+    display: none;
     justify-content: end;
     position: absolute;
     left: 0;
@@ -75,9 +75,9 @@ a:hover {
     background-color: rgba(0, 0, 0, 0.6);
 }
 
-.navigation-menu--hidden-mobile /* Only applies for the mobile layout */
+.navigation-menu--show
 {
-    display: none;
+    display: flex;
 }
 
 .right-menu-nav {
@@ -104,6 +104,10 @@ a:hover {
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.4s;
+}
+
+.secondary-menu-container--show {
+    display: block;
 }
 
 .menu-links, .menu-links-secondary {
@@ -251,9 +255,25 @@ a:hover {
         flex-direction: row;
         align-self: auto;
     }
+    
+    .menu-item {
+        position: relative;
+    }
 
+    .secondary-menu-container {
+        position: absolute;
+        top: 200%;
+        right: 0px;
+        box-shadow: 0px 0px 15px 10px rgba(0, 0, 0, 0.05);
+        border-radius: 10px;
+        white-space: nowrap;
+    }
 
-
+    .menu-links-secondary {
+        margin-left: 0;
+        background-color: #fff;
+        padding: 2rem;
+    }
 
     .sign-container {
         flex-direction: row;
