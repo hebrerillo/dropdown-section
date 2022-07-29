@@ -76,7 +76,7 @@
      */
     SnapApp.prototype.openRightMenu = function ()
     {
-        this.navigationMenu.style.display = 'flex';
+        this.navigationMenu.classList.add('navigation-menu--show');
         this.rightMenu.offsetHeight; //Flush Css animation changes.
         this.rightMenu.classList.add('right-menu-nav--opened');
     };
@@ -96,7 +96,7 @@
     {
         if (!this.rightMenu.classList.contains('right-menu-nav--opened'))
         {
-            this.navigationMenu.style.display = 'none';
+            this.navigationMenu.classList.remove('navigation-menu--show');
         }
     };
 

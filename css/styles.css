@@ -75,6 +75,11 @@ a:hover {
     background-color: rgba(0, 0, 0, 0.6);
 }
 
+.navigation-menu--show
+{
+    display: flex;
+}
+
 .right-menu-nav {
     background-color: #fff;
     display: flex;
