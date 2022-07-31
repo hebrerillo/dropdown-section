@@ -216,14 +216,9 @@ a:hover {
     padding-right: 2rem;
 }
 
-@media screen and (min-width: 1200px) {
-
-    html {
-        font-size: 62.5%;
-    }
+@media screen and (min-width: 700px) {
 
     .main-container {
-        max-width: 140rem;
         margin: 0 auto;
         min-height: auto;
         display: block;
@@ -232,7 +227,7 @@ a:hover {
     /**** HEADER ****/
     .main-header {
         gap: 6rem;
-        margin-bottom: 3rem;
+        margin-bottom: 8rem;
     }
 
     .open-menu-img, .close-menu-img {
@@ -303,26 +298,23 @@ a:hover {
     /* MAIN CONTENT */
     .main-content {
         grid-template-rows: repeat(4, 1fr);
-        grid-template-columns: 1fr 1fr;
-        width: 85%;
+        grid-template-columns: 2fr 1fr;
         margin: 0 auto;
         align-items: end;
         text-align: start;
-        column-gap: 8rem;
+        column-gap: 5rem;
+        padding: 0 2rem;
     }
 
     .hero-img {
         grid-column: 2/3;
         grid-row: 1/-1;
+        align-self: center;
     }
 
     .hero-img picture {
         display: flex;
         justify-content: end;
-    }
-
-    .hero-img img {
-        width: 95%;
     }
 
     .main-section {
@@ -334,16 +326,12 @@ a:hover {
     }
 
     .main-section h1 {
-        font-size: 7.5rem;
+        font-size: 6.5rem;
         line-height: 1;
     }
 
     .main-section h1 span {
         display: block;
-    }
-    
-    .main-section p {
-         width: 90%;
     }
 
     .hero-img, .main-content {
@@ -362,4 +350,39 @@ a:hover {
         padding-left: 0;
         padding-right: 0;
     }
+}
+
+
+@media screen and (min-width: 1200px) {
+
+    html {
+        font-size: 62.5%;
+    }
+
+    /**** HEADER ****/
+    .main-header {
+        margin-bottom: 3rem;
+    }
+
+    /* MAIN CONTENT */
+    .main-content {
+        grid-template-columns: 1fr 1fr;
+        column-gap: 8rem;
+        width: 85%;
+        padding: 0;
+        max-width: 140rem;
+    }
+
+    .hero-img img {
+        width: 95%;
+    }
+
+    .main-section h1 {
+        font-size: 7.5rem;
+    }
+
+    .main-section p {
+        width: 90%;
+    }
+
 }
