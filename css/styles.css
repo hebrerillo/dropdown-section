@@ -211,15 +211,12 @@ a:hover {
 }
 
 /* SHARED STYLES*/
-.main-header, .right-menu-nav, .main-footer, .main-content {
+.main-header, .right-menu-nav, .main-footer, .main-section {
     padding-left: 2rem;
     padding-right: 2rem;
 }
 
 @media screen and (min-width: 850px) {
-    html {
-        font-size: 62.5%;
-    }
 
     .main-container {
         grid-template-rows: auto 1fr;
@@ -301,27 +298,24 @@ a:hover {
     /* MAIN CONTENT */
     .main-content {
         grid-template-rows: 3fr 1fr;
-        grid-template-columns: 1fr 1fr;
-        padding: 0 0 10rem 0;
-        width: 85%;
+        grid-template-columns: 1.5fr 1fr;
+        padding-bottom: 10rem;
+        width: 95%;
         margin: 0 auto;
         align-items: end;
         text-align: start;
+        column-gap: 4rem;
     }
 
     .hero-img {
         grid-column: 2/3;
         grid-row: 1/-1;
         display: flex;
+        align-self: center;
     }
 
     .hero-img img {
-        width: 74%;
-    }
-    
-    .hero-img picture {
-        display: flex;
-        justify-content: end;
+        width: 100%;
     }
 
     .main-section {
@@ -333,10 +327,9 @@ a:hover {
     }
 
     .main-section h1 {
-        font-size: 8.5rem;
-        line-height: 1;
+        font-size: 7.5rem;
     }
-    
+
     .main-section h1 span {
         display: block;
     }
@@ -352,7 +345,43 @@ a:hover {
     .main-footer {
         grid-column: 1/2;
         grid-row: 2;
-        padding:0;
+        padding-bottom: 0;
     }
 
+}
+
+@media screen and (min-width: 1200px) {
+
+    html {
+        font-size: 62.5%;
+    }
+
+
+    /* MAIN CONTENT */
+
+    .main-content {
+        grid-template-columns: 1fr 1fr;
+        column-gap: 0;
+        width: 85%;
+    }
+
+    .hero-img picture {
+        display: flex;
+        justify-content: end;
+    }
+
+    .hero-img img {
+        width: 74%;
+    }
+
+    .main-section h1 {
+        font-size: 6.5rem;
+        line-height: 1;
+    }
+    
+    /** SHARED STYLES **/
+    .main-section, .main-footer {
+        padding-left: 0;
+        padding-right: 0;
+    }
 }
