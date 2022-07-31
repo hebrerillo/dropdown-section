@@ -100,7 +100,7 @@ a:hover {
     transition: max-height 0.4s;
 }
 
-.secondary-menu-container--show {
+.secondary-menu-container--show .secondary-menu-container{
     display: block;
 }
 

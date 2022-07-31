@@ -67,7 +67,7 @@
             if (!subMenu.style.maxHeight)
             {
                 subMenu.style.transition = 'none';
-                subMenu.classList.add('secondary-menu-container--show');
+                menuItem.classList.add('secondary-menu-container--show');
                 subMenu.style.transition = '';
                 subMenu.offsetHeight;
                 subMenu.style.maxHeight = subMenu.scrollHeight + 'px';
@@ -95,7 +95,7 @@
         let subMenu = event.target;
         if (!subMenu.style.maxHeight)
         {
-            subMenu.classList.remove('secondary-menu-container--show');
+            subMenu.closest('.menu-item').classList.remove('secondary-menu-container--show');
             subMenu.removeEventListener('transitionend', this.submenuTransitionEndCB);
         }
     };
