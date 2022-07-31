@@ -109,7 +109,6 @@ a:hover {
     display: flex;
     flex-direction: column;
     gap: 2rem;
-    align-self: start;
 }
 
 .menu-item {
@@ -137,10 +136,6 @@ a:hover {
 
 .secondary-menu-container--show .menu-item-title[data-opensecundary]::after {
     content: url('../images/icon-arrow-up.svg');
-}
-
-.arrow-button--hiden {
-    display: none;
 }
 
 .sign-container {
@@ -280,6 +275,7 @@ a:hover {
 
     .menu-item {
         position: relative;
+        flex-direction: row;
     }
 
     .menu-item-title {
