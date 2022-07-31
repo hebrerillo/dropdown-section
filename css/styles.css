@@ -207,6 +207,10 @@ a:hover {
 }
 
 .sponsor-footer-img {
+    width: 6.5rem;
+}
+
+.sponsor-footer-img--databiz {
     width: 8.5rem;
 }
 
@@ -343,6 +347,10 @@ a:hover {
         grid-column: 1/2;
         grid-row: 4/5;
         padding-bottom: 0;
+    }
+
+    .sponsor-footer-img {
+        width: 8.5rem;
     }
 
     /* SHARED STYLES */
