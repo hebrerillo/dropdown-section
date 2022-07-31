@@ -313,7 +313,6 @@ a:hover {
     .main-content {
         grid-template-rows: repeat(4, 1fr);
         grid-template-columns: 2fr 1fr;
-        margin: 0 auto;
         align-items: end;
         text-align: start;
         column-gap: 5rem;
@@ -380,6 +379,7 @@ a:hover {
     /* MAIN CONTENT */
     .main-content {
         width: 75%;
+        margin: 0 auto;
     }
 }
 
