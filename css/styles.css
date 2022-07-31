@@ -129,6 +129,15 @@ a:hover {
     cursor: pointer;
 }
 
+.menu-item-title[data-opensecundary]::after {
+    content: url('../images/icon-arrow-down.svg');
+    width: 10px;
+}
+
+.secondary-menu-container--show .menu-item-title[data-opensecundary]::after {
+    content: url('../images/icon-arrow-up.svg');
+}
+
 .arrow-button--hiden {
     display: none;
 }
@@ -263,13 +272,17 @@ a:hover {
     }
 
     .menu-links {
-        display: flex;
         flex-direction: row;
         align-self: auto;
+        gap: 4rem;
     }
 
     .menu-item {
         position: relative;
+    }
+
+    .menu-item-title {
+        gap: 0.7rem;
     }
 
     .secondary-menu-container {
