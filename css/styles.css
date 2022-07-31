@@ -11,7 +11,7 @@ html {
 
 body {
     font-family: sans-serif;
-    color: #444;
+    color: #666;
 }
 
 /* GENERAL STYLES */
@@ -158,13 +158,14 @@ a:hover {
     text-align: center;
     display: grid;
     grid-template-rows: auto 1fr auto;
+    padding-bottom: 4rem;
 }
 
 .hero-img {
     margin-bottom: 5rem;
 }
 
-.hero-img img{
+.hero-img img {
     width: 100%;
 }
 
@@ -208,7 +209,6 @@ a:hover {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding-bottom: 4rem;
 }
 
 .sponsor-footer-img {
@@ -412,6 +412,7 @@ a:hover {
 
     .main-section p {
         width: 90%;
+        font-size: 1.8rem;
     }
 
 }
