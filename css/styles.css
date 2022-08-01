@@ -65,12 +65,17 @@ a:hover {
     top: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.6);
+    background-color: rgba(0, 0, 0, 0);
+    transition: background-color;
 }
 
 .navigation-menu--show
 {
     display: flex;
+}
+
+.navigation-menu--show--fadeIn {
+    background-color: rgba(0, 0, 0, 0.6);
 }
 
 .right-menu-nav {
@@ -79,8 +84,12 @@ a:hover {
     flex-direction: column;
     gap: 5rem;
     width: 30rem;
-    transition: transform 0.5s;
+    transition: transform;
     transform: translateX(100%);
+}
+
+.right-menu-nav, .navigation-menu {
+    transition-duration: 0.5s;
 }
 
 .right-menu-nav--opened {

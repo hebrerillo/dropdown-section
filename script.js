@@ -106,7 +106,8 @@
     SnapApp.prototype.openRightMenu = function ()
     {
         this.navigationMenu.classList.add('navigation-menu--show');
-        this.rightMenu.offsetHeight; //Flush Css animation changes.
+        this.navigationMenu.offsetHeight; //flush CSS transition changes.
+        this.navigationMenu.classList.add('navigation-menu--show--fadeIn');
         this.rightMenu.classList.add('right-menu-nav--opened');
     };
 
@@ -116,6 +117,7 @@
     SnapApp.prototype.closeRightMenu = function ()
     {
         this.rightMenu.classList.remove('right-menu-nav--opened');
+        this.navigationMenu.classList.remove('navigation-menu--show--fadeIn');
     };
 
     /**
