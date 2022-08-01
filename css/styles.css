@@ -118,7 +118,7 @@ a:hover {
 .menu-links, .menu-links-secondary {
     display: flex;
     flex-direction: column;
-    gap: 2rem;
+    gap: 3rem;
 }
 
 .menu-item {
@@ -250,6 +250,7 @@ a:hover {
     /**** HEADER ****/
     .main-header {
         gap: 6rem;
+        font-size: 1.6rem;
     }
 
     .open-menu-img, .close-menu-img {
@@ -397,11 +398,6 @@ a:hover {
     }
     
     /* HEADER */
-    
-    .main-header {
-        font-size: 1.6rem;
-    }
-    
     .menu-links-secondary {
         gap: 2rem;
     }
