@@ -32,6 +32,7 @@ a:hover {
 .main-container {
     position: relative;
     min-height: 100vh;
+    min-height: calc(var(--vh, 1vh) * 100);
     display: grid;
     grid-template-rows: auto 1fr;
 }
@@ -213,7 +214,6 @@ a:hover {
 }
 
 /** FOOTER **/
-
 .main-footer {
     display: flex;
     align-items: center;

@@ -8,6 +8,15 @@
         <link rel="stylesheet" href="css/styles.css" />
 
         <title>Frontend Mentor | Intro section with dropdown navigation</title>
+        <script>
+            /* Using a custom property to get rid of the height of the address bar on mobile phones, and place the footer on the bottom of the page.
+             Reference: https://css-tricks.com/the-trick-to-viewport-units-on-mobile/ */
+            document.documentElement.style.setProperty('--vh', `${(window.innerHeight * 0.01)}px`);
+            window.addEventListener('resize', () => {
+                document.documentElement.style.setProperty('--vh', `${(window.innerHeight * 0.01)}px`);
+            });
+        </script>
+
         <script defer src="script.js"></script>
     </head>
     <body>
