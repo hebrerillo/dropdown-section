@@ -295,6 +295,7 @@ a:hover {
         margin-left: 0;
         background-color: #fff;
         padding: 2rem;
+        gap: 3rem;
     }
 
     .sign-container {
@@ -303,7 +304,6 @@ a:hover {
     }
 
     .register-button {
-
         align-self: auto;
         text-align: unset;
         padding: 1rem 2rem;
@@ -353,10 +353,6 @@ a:hover {
         padding-bottom: 0;
     }
 
-    .sponsor-footer-img {
-        width: 8.5rem;
-    }
-
     /* SHARED STYLES */
     .main-section, .main-footer {
         padding-left: 0;
@@ -386,6 +382,11 @@ a:hover {
         max-width: 140rem;
         row-gap: 3rem;
     }
+    
+    /* HEADER */
+    .menu-links-secondary {
+        gap: 2rem;
+    }
 
     /* MAIN CONTENT */
     .main-content {
@@ -407,6 +408,12 @@ a:hover {
     .main-section p {
         width: 90%;
         font-size: 1.8rem;
+    }
+
+    
+    /* FOOTER */
+    .sponsor-footer-img {
+        width: 8.5rem;
     }
 
 }
