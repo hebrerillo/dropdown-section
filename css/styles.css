@@ -141,11 +141,11 @@ a:hover {
 
 .menu-item-title[data-opensecundary]::after {
     content: url('../images/icon-arrow-down.svg');
-    width: 10px;
+    
 }
 
 .secondary-menu-container--show .menu-item-title[data-opensecundary]::after {
-    content: url('../images/icon-arrow-up.svg');
+    transform: rotate(180deg);
 }
 
 .sign-container {
