@@ -1,3 +1,8 @@
+:root {
+    --black: hsl(0, 0%, 8%);
+    --light-grey: hsl(0, 0%, 41%);
+}
+
 html {
     box-sizing: border-box;
     font-size: 50%;
@@ -11,7 +16,7 @@ html {
 
 body {
     font-family: 'Epilogue', sans-serif;
-    color: hsl(0, 0%, 41%);
+    color: var(--light-grey);
 }
 
 /* GENERAL STYLES */
@@ -26,7 +31,7 @@ a {
 }
 
 a:hover {
-    color: hsl(0, 0%, 8%);
+    color: var(--black);
 }
 
 .main-container {
@@ -157,13 +162,13 @@ a:hover {
 
 .register-button {
     align-self: stretch;
-    border: 1px solid hsl(0, 0%, 41%);
+    border: 1px solid var(--light-grey);
     text-align: center;
     padding: 1.2rem 0;
 }
 
 .register-button:hover {
-    border: 1px solid hsl(0, 0%, 8%);
+    border: 1px solid var(--black);
 }
 
 /****** MAIN CONTENT ******/
@@ -192,7 +197,7 @@ a:hover {
 
 .main-section h1 {
     font-size: 3.5rem;
-    color: hsl(0, 0%, 8%);
+    color: var(--black);
 }
 
 .main-section p {
@@ -201,10 +206,10 @@ a:hover {
 }
 
 .hoverable-button {
-    background-color: hsl(0, 0%, 8%);
+    background-color: var(--black);
     color: hsl(0, 0%, 98%);
     padding: 1.5rem 2.9rem;
-    border: 1px solid hsl(0, 0%, 8%);
+    border: 1px solid hslvar(--black);
     font-size: 1.9rem;
     font-weight: 600;
     cursor: pointer;
@@ -213,7 +218,7 @@ a:hover {
 .hoverable-button:hover
 {
     background-color: hsl(0, 0%, 98%);
-    color: hsl(0, 0%, 8%);
+    color: var(--black);
 }
 
 /** FOOTER **/
