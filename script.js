@@ -60,28 +60,30 @@
     {
         event.stopPropagation();
         let clickedElement = event.target.closest('.menu-item-title[data-opensecundary]');
-        if (clickedElement)
+        if (!clickedElement)
         {
-            const menuItem = clickedElement.closest('.menu-item');
-            const subMenu = menuItem.querySelector('.secondary-menu-container');
-            if (!subMenu.style.maxHeight)
-            {
-                subMenu.style.transition = 'none';
-                menuItem.classList.add('secondary-menu-container--show');
-                subMenu.style.transition = '';
-                subMenu.offsetHeight;
-                subMenu.style.maxHeight = subMenu.scrollHeight + 'px';
-
-                subMenu.addEventListener('transitionend', this.submenuTransitionEndCB);
-                this.closeSubmenus(subMenu);
-            }
-            else
-            {
-                subMenu.style.maxHeight = null;
-            }
-
             return;
         }
+
+        const menuItem = clickedElement.closest('.menu-item');
+        const subMenu = menuItem.querySelector('.secondary-menu-container');
+        if (!subMenu.style.maxHeight)
+        {
+            subMenu.style.transition = 'none';
+            menuItem.classList.add('secondary-menu-container--show');
+            subMenu.style.transition = '';
+            subMenu.offsetHeight;
+            subMenu.style.maxHeight = subMenu.scrollHeight + 'px';
+
+            subMenu.addEventListener('transitionend', this.submenuTransitionEndCB);
+            this.closeSubmenus(subMenu);
+        }
+        else
+        {
+            subMenu.style.maxHeight = null;
+        }
+
+        return;
     };
 
     /**
